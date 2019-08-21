@@ -10,7 +10,7 @@ class ContadorPage extends StatefulWidget {
 class _ContadorPageState extends State<ContadorPage> {
 
   final _estiloTexto = new TextStyle(fontSize: 30.0);
-  int _conteo = 10;
+  int _conteo = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _ContadorPageState extends State<ContadorPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Número de clicks', style: _estiloTexto,),
+            Text('Número de taps', style: _estiloTexto,),
             Text('$_conteo', style: _estiloTexto),
           ]
         )
@@ -35,7 +35,14 @@ class _ContadorPageState extends State<ContadorPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // print('Hola mundo');
+
+          // Incremento la variable en 1
           _conteo++;
+
+          // Redibujo la pantalla
+          setState(() {
+
+          });
         },
         child: Icon(Icons.add),
       ),
