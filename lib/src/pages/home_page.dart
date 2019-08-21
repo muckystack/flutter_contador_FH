@@ -13,6 +13,8 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         // elevation: 0.1
       ),
+      // Recoloca el boton flotante
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
