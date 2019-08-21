@@ -32,21 +32,35 @@ class _ContadorPageState extends State<ContadorPage> {
           ]
         )
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // print('Hola mundo');
-
-          // Incremento la variable en 1
-          _conteo++;
-
-          // Redibujo la pantalla
-          setState(() {
-
-          });
-        },
-        child: Icon(Icons.add),
-      ),
+      floatingActionButton: _crearBotones()
     );
+  }
+
+
+  // Funcion que retorna un widget
+  Widget _crearBotones() {
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: <Widget>[
+
+        SizedBox(width: 30.0),
+
+        FloatingActionButton(child: Icon(Icons.exposure_zero),onPressed: null),
+
+        Expanded(child: SizedBox()),
+
+        FloatingActionButton(child: Icon(Icons.remove),onPressed: null),
+
+        SizedBox(width: 5.0),
+        
+        FloatingActionButton(child: Icon(Icons.add),onPressed: null),
+
+        SizedBox(width: 5.0),        
+        
+      ],
+    );
+    
   }
 
 }
