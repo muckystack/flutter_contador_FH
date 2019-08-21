@@ -12,8 +12,10 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            
+            Text('Hola mundo', style: TextStyle(fontSize: 25.0),),
+            Text('0', style: TextStyle(fontSize: 25.0),),
           ]
         )
       ),
